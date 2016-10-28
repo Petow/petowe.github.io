@@ -1,0 +1,227 @@
+header {
+    font-family: Century Gothic, sans-serif;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+header .me {
+    float: right;
+    width: 140px;
+    height: 140px;
+    margin-right: 20px;
+}
+
+header .info {
+    float: left;
+}
+
+header .info .contact, header .info .site {
+    width: 240px;
+    float: left;
+}
+
+header a {
+    color: #42b983;
+}
+
+body {
+    perspective: 15000px;
+}
+
+.sixd {
+  right: 0px;
+    position: fixed;
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: run 10s infinite linear;
+
+}
+
+.sixm {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.8;
+}
+
+#front {
+    transform: translateZ(50px);
+    background-image: url(../img/1.jpg);
+}
+
+#back {
+    transform: rotateX(180deg) translateZ(50px);
+    background-image: url(../img/2.jpg);
+}
+
+#left {
+    transform: rotateY(-90deg) translateZ(50px);
+    background-image: url(../img/3.jpg);
+}
+
+#right {
+    transform: rotateY(90deg) translateZ(50px);
+    background-image: url(../img/4.jpg);
+}
+
+#top {
+    transform: rotateX(90deg) translateZ(50px);
+    background-image: url(../img/5.jpg);
+}
+
+#bottom {
+    transform: rotateX(-90deg) translateZ(50px);
+    background-image: url(../img/6.jpg);
+}
+
+@keyframes run {
+    from {
+        transform: rotateX(0) rotateY(0);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(720deg);
+    }
+}
+
+section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    overflow: hidden;
+}
+
+section h3 {
+    color: #42b983;
+}
+
+section h4 {
+    margin: 10px 0;
+}
+
+section a {
+    color: darkturquoise;
+    display: block;
+}
+
+section .title, section .describe {
+    float: left;
+}
+
+section .title {
+    width: 193.93939px;
+}
+
+section .describe {
+    width: 557.49129px;
+    margin-left: 34.78261px;
+}
+
+section .describe .bar {
+    font-family: Century Gothic, sans-serif;
+    border: 1px solid #12FFF7;
+    border-right: none;
+    text-align: right;
+    color: #FFF;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    height: 30px;
+    line-height: 30px;
+    background: linear-gradient(to right, #B3FFAB, #12FFF7);
+}
+
+section .describe .bar:after {
+    position: absolute;
+    margin-top: -1px;
+    content: '.';
+    border: 1px solid #12FFF7;
+    border-left: none;
+}
+
+section .describe .CET4 {
+    width: 220px;
+}
+
+section .describe .CET4:after {
+    width: 30px;
+}
+
+section:last-of-type {
+    padding-bottom: 40px;
+}
+
+section .date {
+    color: #e96900;
+}
+
+.aqua {
+    color: #00b892;
+}
+
+canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    color: #2c3e50;
+    line-height: 1.8;
+    box-shadow: 0 1px 1px 1px #ccc;
+    width: 100%;
+}
+
+ul, ol, li {
+    list-style: none;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+header, main, footer {
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 800px) {
+    header, main, footer {
+        box-sizing: border-box;
+        width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        box-shadow: none;
+    }
+    header, main, footer {
+        width: 100%;
+    }
+    header .me, header .info {
+        float: none;
+        display: block;
+        margin: 10px auto;
+    }
+    header, section {
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    section .title, section .describe {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+/*# sourceMappingURL=maps/style.css.map */
